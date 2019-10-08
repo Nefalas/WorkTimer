@@ -3,4 +3,4 @@ project(WorkTimer)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(WorkTimer main.cpp FileHelper.cpp FileHelper.h)
+add_executable(WorkTimer main.cpp Helpers/FileHelper.cpp Helpers/FileHelper.h)
