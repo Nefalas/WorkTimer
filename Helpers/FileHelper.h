@@ -5,14 +5,23 @@
 #ifndef WORKTIMER_FILEHELPER_H
 #define WORKTIMER_FILEHELPER_H
 
+#include <string>
+
 class FileHelper {
 public:
     FileHelper();
-    void initLogDir();
 
 private:
     static const char* ROOT_DIR_NAME;
-    const char* ROOT_DIR_PATH{};
+    static const char* LOG_FILE_NAME;
+    std::string ROOT_DIR_PATH;
+    std::string LOG_FILE_PATH;
+    void setupRootDirPath();
+    void setupFilePaths();
+    void initLogDir();
+    void initFiles();
+    static bool directoryExists(std::string path);
+    static bool fileExists(std::string path);
 };
 
 
